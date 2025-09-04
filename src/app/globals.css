@@ -38,6 +38,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -56,6 +57,9 @@
 
 :root {
   --gradient: linear-gradient(90deg, #b86adf 0%, #ff6c63 52%, #ffb147 100%);
+  --gradient-start: #b86adf;
+  --gradient-middle: #ff6c63;
+  --gradient-end: #ffb147;
   --background: #fcfcfc;
   --foreground: #000000;
   --card: #ffffff;
@@ -88,7 +92,8 @@
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #ebebeb;
   --sidebar-ring: #000000;
-  --font-sans: IBM Plex Sans, sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+  --font-serif: IBM Plex, serif;
   --radius: 0.5rem;
   --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
   --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
@@ -109,6 +114,9 @@
 
 .dark {
   --gradient: linear-gradient(90deg, #b86adf 0%, #ff6c63 52%, #ffb147 100%);
+  --gradient-start: #b86adf;
+  --gradient-middle: #ff6c63;
+  --gradient-end: #ffb147;
   --background: #000000;
   --foreground: #ffffff;
   --card: #090909;
@@ -141,7 +149,8 @@
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #333333;
   --sidebar-ring: #a4a4a4;
-  --font-sans: IBM Plex Sans, sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+  --font-serif: IBM Plex, serif;
   --radius: 0.5rem;
   --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
   --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
@@ -160,7 +169,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-all duration-100 ease-in-out;
   }
   body {
     @apply bg-background text-foreground;
@@ -168,6 +177,38 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--gradient-start);
+  color: var(--primary);
+}
+
 .bg-gradient {
   background-image: var(--gradient);
+}
+
+/* NavBar */
+.nav-link {
+  position: relative;
+}
+.nav-link.selected {
+  font-weight: bold;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-image: var(--gradient);
+  z-index: -1;
+  transition: width 0.15s ease-in-out;
+}
+.nav-link.selected::after,
+.nav-link:hover::after {
+  width: 110%;
 }
