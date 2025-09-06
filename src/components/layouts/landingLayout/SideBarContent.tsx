@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ThemeSwitch } from '@/components/ui';
 import { socialLinks } from '@/services/data';
-import * as motion from 'motion/react-client';
-import { fadeInUp, slideInMinLeft, staggerContainer } from '@/lib/motionConfig';
+import { AnimatedWrapper } from '@/components/shared';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -20,6 +19,7 @@ interface SideBarContentProps {
 
 const SideBarContent = ({ setOpen }: SideBarContentProps) => {
   const [selectedLink, setSelectedLink] = useState('home');
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,7 +29,7 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
           }
         });
       },
-      { threshold: 0.6 } // 60% of section must be visible
+      { threshold: 0.6 }
     );
 
     sections.forEach((section) => {
@@ -39,16 +39,18 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
 
     return () => observer.disconnect();
   }, []);
+
   return (
     <>
       <h1 className="font-serif text-3xl font-bold italic">
         <Link href="/">KM</Link>
       </h1>
-      <motion.ul
-        variants={staggerContainer}
-        className="flex flex-col gap-5 text-lg">
-        {sections.map((s) => (
-          <motion.li variants={slideInMinLeft} key={s.id}>
+      <AnimatedWrapper from="left" className="flex flex-col gap-5 text-lg">
+        {sections.map((s, i) => (
+          <AnimatedWrapper
+            delay={0.15 * i}
+            key={s.id}
+            from="left">
             <Link
               className={`nav-link ${selectedLink === s.id ? 'selected' : ''}`}
               href={`#${s.id}`}
@@ -58,14 +60,14 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
               }}>
               {s.label}
             </Link>
-          </motion.li>
+          </AnimatedWrapper>
         ))}
-      </motion.ul>
-      <motion.div variants={staggerContainer} className="flex flex-col gap-7.5">
-        <motion.div variants={fadeInUp}>
+      </AnimatedWrapper>
+      <AnimatedWrapper from="down" className="flex flex-col gap-7.5">
+        <AnimatedWrapper from="down" delay={0.15}>
           <ThemeSwitch />
-        </motion.div>
-        <motion.div variants={fadeInUp}>
+        </AnimatedWrapper>
+        <AnimatedWrapper from="down" delay={0.3}>
           <div className="flex gap-3 *:p-2 *:bg-background *:dark:bg-background/10 *:rounded-full">
             {socialLinks.map((s) => (
               <Link key={s.id} target="_blank" href={s.href}>
@@ -78,11 +80,11 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
               </Link>
             ))}
           </div>
-        </motion.div>
-        <motion.p variants={fadeInUp}>
-          Copyright &copy;2025 Kimo Dev. All right reserved.
-        </motion.p>
-      </motion.div>
+        </AnimatedWrapper>
+        <AnimatedWrapper from="down" delay={0.45}>
+          <p>Copyright &copy;2025 Kimo Dev. All rights reserved.</p>
+        </AnimatedWrapper>
+      </AnimatedWrapper>
     </>
   );
 };
