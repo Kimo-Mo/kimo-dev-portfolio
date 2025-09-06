@@ -17,7 +17,7 @@ const AboutSection = () => {
       <motion.p
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={slideInLeft}
         className="italic font-semibold capitalize">
         Nice to meet you!
@@ -25,7 +25,7 @@ const AboutSection = () => {
       <motion.h2
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={slideInLeft}
         className="text-3xl lg:text-5xl font-bold uppercase mt-4 mb-10">
         Welcome to...
@@ -34,7 +34,7 @@ const AboutSection = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.6 }}
           variants={slideInRight}
           className="text-center flex-2/5">
           <Image
@@ -62,7 +62,7 @@ const AboutSection = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.6 }}
             variants={slideInLeft}
             className="grid grid-cols-1 xl:grid-cols-2 gap-4 pb-10 border-b border-border">
             <MyInfo text={phone} icon={<Phone />} />
@@ -73,7 +73,7 @@ const AboutSection = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.6 }}
             variants={slideInRight}
             className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
@@ -100,7 +100,7 @@ const AboutSection = () => {
           <motion.p
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.6 }}
             variants={slideInLeft}
             className="flex items-center gap-2 bg-primary text-primary-foreground p-5 italic font-semibold">
             <QuoteDown size="46" color="#555" variant="Bold" />

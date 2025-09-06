@@ -16,7 +16,7 @@ const HeroSection = () => {
       <motion.article
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={slideInRight}>
         <h1 className="text-3xl lg:text-5xl uppercase mb-6">
           my name <br className="hidden lg:block" /> is{' '}
@@ -40,7 +40,7 @@ const HeroSection = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={slideInLeft}>
         <Image
           src="/images/hero.png"

@@ -12,7 +12,7 @@ const ExperienceSection = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={staggerContainer}
         className="flex-1 flex flex-col items-start">
         <motion.p
@@ -38,24 +38,30 @@ const ExperienceSection = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.6 }}
         variants={staggerContainer}
         className="flex-1 flex justify-center flex-col gap-10 w-full">
-        <motion.div variants={slideInLeft} className="border-b border-border pb-4">
+        <motion.div
+          variants={slideInLeft}
+          className="border-b border-border pb-4">
           <p className="capitalize text-lg flex justify-between items-center mb-3">
             <span> - jul 2025 - present</span>
             <span> - Buguard </span>
           </p>
           <h2 className="text-2xl font-bold">Frontend Developer, Intern</h2>
         </motion.div>
-        <motion.div variants={slideInLeft} className="border-b border-border pb-4">
+        <motion.div
+          variants={slideInLeft}
+          className="border-b border-border pb-4">
           <p className="capitalize text-lg flex justify-between items-center mb-3">
             <span> -jul 2024 - sep 2024</span>
             <span> - ITI </span>
           </p>
           <h2 className="text-2xl font-bold">Frontend Developer, Intern</h2>
         </motion.div>
-        <motion.div variants={slideInLeft} className="border-b border-border pb-4">
+        <motion.div
+          variants={slideInLeft}
+          className="border-b border-border pb-4">
           <p className="capitalize text-lg flex justify-between items-center mb-3">
             <span> - 2022 - present</span>
             <span> - freelance </span>
