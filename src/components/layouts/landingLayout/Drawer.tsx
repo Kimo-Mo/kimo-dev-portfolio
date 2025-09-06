@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import * as motion from 'motion/react-client';
 import {
   DrawerContent,
   DrawerDescription,
@@ -11,11 +10,13 @@ import {
   Drawer as UIDrawer,
 } from '@/components/ui';
 import SideBarContent from './SideBarContent';
+import { AnimatedWrapper } from '@/components/shared';
 
 interface DrawerProps {
   open: boolean;
   setOpen: (open: boolean) => void;
 }
+
 const Drawer = ({ open, setOpen }: DrawerProps) => {
   return (
     <UIDrawer open={open} onOpenChange={setOpen} direction="left">
@@ -27,12 +28,10 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             <DrawerDescription />
           </DrawerHeader>
         </div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
+        <div
           className="flex flex-col justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12">
           <SideBarContent setOpen={setOpen} />
-        </motion.div>
+        </div>
       </DrawerContent>
     </UIDrawer>
   );

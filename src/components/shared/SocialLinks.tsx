@@ -1,16 +1,12 @@
 import { socialLinks } from '@/services/data';
 import Link from 'next/link';
 import Image from 'next/image';
-import * as motion from 'motion/react-client';
-import { slideInMinRight } from '@/lib/motionConfig';
+import { AnimatedWrapper } from './AnimatedWrapper';
 
 export const SocialLinks = () => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.6 }}
-      variants={slideInMinRight}
+    <AnimatedWrapper
+      from="right"
       className="fixed top-0 end-4 h-screen w-fit z-10 flex items-center">
       <div className="flex flex-col justify-center items-center gap-3">
         {socialLinks.map((s) => (
@@ -29,6 +25,6 @@ export const SocialLinks = () => {
         ))}
         <span className="block w-[2px] h-20 bg-primary rounded-xl"></span>
       </div>
-    </motion.div>
+    </AnimatedWrapper>
   );
 };
