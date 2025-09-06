@@ -11,7 +11,7 @@ export const SocialLinks = () => {
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
       variants={slideInMinRight}
-      className="fixed top-0 end-4 h-screen w-fit z-90 flex items-center">
+      className="fixed top-0 end-4 h-screen w-fit z-10 flex items-center">
       <div className="flex flex-col justify-center items-center gap-3">
         {socialLinks.map((s) => (
           <Link
