@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-middle: var(--gradient-middle);
+  --color-gradient-end: var(--gradient-end);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -172,12 +175,14 @@
     @apply border-border outline-ring/50 transition-all duration-100 ease-in-out;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     letter-spacing: var(--tracking-normal);
   }
 }
 
 html {
+  width: 100vw;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

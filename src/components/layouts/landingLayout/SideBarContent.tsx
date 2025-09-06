@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ThemeSwitch } from '@/components/ui';
+import { socialLinks } from '@/services/data';
+import * as motion from 'motion/react-client';
+import { fadeInUp, slideInMinLeft, staggerContainer } from '@/lib/motionConfig';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -9,11 +12,6 @@ const sections = [
   { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
   { id: 'contacts', label: 'Contacts' },
-];
-const socialLinks = [
-  { id: 'linkedin', href: 'https://www.linkedin.com/in/kareem-dev/' },
-  { id: 'github', href: 'https://github.com/kimo-mo' },
-  { id: 'instagram', href: 'https://www.instagram.com/kareem_mohamed_19/' },
 ];
 
 interface SideBarContentProps {
@@ -46,9 +44,11 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
       <h1 className="font-serif text-3xl font-bold italic">
         <Link href="/">KM</Link>
       </h1>
-      <ul className="flex flex-col gap-5 text-xl">
+      <motion.ul
+        variants={staggerContainer}
+        className="flex flex-col gap-5 text-lg">
         {sections.map((s) => (
-          <li key={s.id}>
+          <motion.li variants={slideInMinLeft} key={s.id}>
             <Link
               className={`nav-link ${selectedLink === s.id ? 'selected' : ''}`}
               href={`#${s.id}`}
@@ -58,25 +58,31 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
               }}>
               {s.label}
             </Link>
-          </li>
+          </motion.li>
         ))}
-      </ul>
-      <div className="flex flex-col gap-7.5">
-        <ThemeSwitch />
-        <div className="flex gap-3 *:p-2 *:bg-background *:dark:bg-background/10 *:rounded-full">
-          {socialLinks.map((s) => (
-            <Link key={s.id} target="_blank" href={s.href}>
-              <Image
-                src={`/social-icons/${s.id}.svg`}
-                alt={s.id}
-                width={24}
-                height={24}
-              />
-            </Link>
-          ))}
-        </div>
-        <p>Copyright &copy;2025 Kimo Dev. All right reserved.</p>
-      </div>
+      </motion.ul>
+      <motion.div variants={staggerContainer} className="flex flex-col gap-7.5">
+        <motion.div variants={fadeInUp}>
+          <ThemeSwitch />
+        </motion.div>
+        <motion.div variants={fadeInUp}>
+          <div className="flex gap-3 *:p-2 *:bg-background *:dark:bg-background/10 *:rounded-full">
+            {socialLinks.map((s) => (
+              <Link key={s.id} target="_blank" href={s.href}>
+                <Image
+                  src={`/social-icons/${s.id}.svg`}
+                  alt={s.id}
+                  width={24}
+                  height={24}
+                />
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+        <motion.p variants={fadeInUp}>
+          Copyright &copy;2025 Kimo Dev. All right reserved.
+        </motion.p>
+      </motion.div>
     </>
   );
 };

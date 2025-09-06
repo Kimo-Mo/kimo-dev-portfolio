@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import * as motion from 'motion/react-client';
 import {
   DrawerContent,
   DrawerDescription,
@@ -26,9 +27,12 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             <DrawerDescription />
           </DrawerHeader>
         </div>
-        <div className="flex flex-col justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12">
           <SideBarContent setOpen={setOpen} />
-        </div>
+        </motion.div>
       </DrawerContent>
     </UIDrawer>
   );
