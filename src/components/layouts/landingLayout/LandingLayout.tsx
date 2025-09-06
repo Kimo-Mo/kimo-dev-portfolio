@@ -14,7 +14,7 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
       <SideBar setOpen={setOpen} />
       <Drawer open={open} setOpen={setOpen} />
       <div className="flex-1">
-        <div className="lg:hidden px-[2rem] py-4 flex justify-between items-center sticky top-0 start-0 w-full z-50 bg-background border-b border-border">
+        <div className="lg:hidden px-4 py-4 flex justify-between items-center sticky top-0 start-0 w-full z-50 bg-background border-b border-border">
           <h1 className="font-serif text-2xl font-bold italic">
             <Link href="/">KM</Link>
           </h1>
