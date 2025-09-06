@@ -9,7 +9,7 @@ export const SocialLinks = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.6 }}
       variants={slideInMinRight}
       className="fixed top-0 end-4 h-screen w-fit z-10 flex items-center">
       <div className="flex flex-col justify-center items-center gap-3">
@@ -32,4 +32,3 @@ export const SocialLinks = () => {
     </motion.div>
   );
 };
-
