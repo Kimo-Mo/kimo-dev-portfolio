@@ -12,7 +12,7 @@ const AboutSection = () => {
 
   return (
     <section id="about">
-      <AnimatedWrapper from="left">
+      <AnimatedWrapper from="left" className="mt-16 lg:mt-0">
         <p className="italic font-semibold capitalize">Nice to meet you!</p>
       </AnimatedWrapper>
       <AnimatedWrapper from="left">

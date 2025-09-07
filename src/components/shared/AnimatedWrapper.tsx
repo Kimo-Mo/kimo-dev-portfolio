@@ -1,7 +1,7 @@
 'use client';
 
 import { useInView, motion } from 'motion/react';
-import { easeInOut } from 'motion';
+import { easeOut } from 'motion';
 import { useRef } from 'react';
 
 interface AnimatedWrapperProps {
@@ -21,27 +21,27 @@ export const AnimatedWrapper = ({
   const inView = useInView(ref, { amount: 0.3 });
 
   const initial = {
-    left: { opacity: 0, x: -40 },
-    right: { opacity: 0, x: 40 },
-    up: { opacity: 0, y: -40 },
-    down: { opacity: 0, y: 40 },
+    left: { opacity: 0, x: -75 },
+    right: { opacity: 0, x: 75 },
+    up: { opacity: 0, y: -75 },
+    down: { opacity: 0, y: 75 },
   }[from];
   const transition = {
-    duration: 0.3,
-    ease: easeInOut,
+    duration: 0.45,
+    ease: easeOut,
     delay,
   };
   const animate = inView
     ? { opacity: 1, x: 0, y: 0 }
     : {
-        opacity: 0.2,
+        opacity: 0,
         ...(from === 'left'
-          ? { x: -20 }
+          ? { x: -75 }
           : from === 'right'
-          ? { x: 20 }
+          ? { x: 75 }
           : from === 'up'
-          ? { y: -20 }
-          : { y: 20 }),
+          ? { y: -75 }
+          : { y: 75 }),
       };
 
   return (

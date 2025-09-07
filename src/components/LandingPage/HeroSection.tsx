@@ -2,15 +2,15 @@ import Image from 'next/image';
 import { AnimatedWrapper, IButton, MyInfo } from '../shared';
 import Link from 'next/link';
 import { Mail, Phone } from 'lucide-react';
-import { personalData, socialLinks } from '@/services/data';
+import { personalData } from '@/services/data';
 
 const HeroSection = () => {
   const { firstName, lastName, phone, email } = personalData;
   return (
     <section
-      className="flex flex-col lg:flex-row items-center justify-between mt-16 lg:mt-0"
+      className="flex flex-col lg:flex-row items-center justify-between"
       id="home">
-      <article>
+      <article className="mt-16 lg:mt-0">
         <AnimatedWrapper from="right">
           <h1 className="text-3xl lg:text-5xl uppercase mb-6">
             my name <br className="hidden lg:block" /> is{' '}
