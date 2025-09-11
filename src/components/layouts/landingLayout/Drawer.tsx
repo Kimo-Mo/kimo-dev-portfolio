@@ -10,7 +10,6 @@ import {
   Drawer as UIDrawer,
 } from '@/components/ui';
 import SideBarContent from './SideBarContent';
-import { AnimatedWrapper } from '@/components/shared';
 
 interface DrawerProps {
   open: boolean;

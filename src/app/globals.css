@@ -180,6 +180,22 @@
   }
 }
 
+::-webkit-scrollbar-thumb {
+  @apply rounded;
+  background-image: linear-gradient(
+    180deg,
+    #b86adf 0%,
+    #ff6c63 52%,
+    #ffb147 100%
+  );
+}
+::-webkit-scrollbar-track {
+  @apply bg-primary/50;
+}
+::-webkit-scrollbar {
+  @apply w-2.5 h-2.5;
+}
+
 html {
   width: 100vw;
   overflow-x: hidden;
@@ -216,4 +232,24 @@ html {
 .nav-link.selected::after,
 .nav-link:hover::after {
   width: 110%;
+}
+
+/* Accordion */
+
+.accordion-title::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: var(--gradient-start);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-radius: 50%;
+}
+@media (width < 1024px) {
+  .accordion-title::before {
+    width: 6px;
+    height: 6px;
+  }
 }
