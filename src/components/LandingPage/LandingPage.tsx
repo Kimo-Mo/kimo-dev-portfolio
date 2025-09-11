@@ -4,7 +4,7 @@ import ExperienceSection from './ExperienceSection';
 
 const LandingPage = () => {
   return (
-    <main className="lg:ml-[285px] mb-10 *:min-h-screen *:pt-[2rem] *:lg:pt-[3.5rem] *:px-4 *:lg:px-20">
+    <main className="lg:ml-[285px] mb-10 *:min-h-screen *:pt-[2rem] *:lg:pt-[3.5rem] *:px-5 *:lg:px-20">
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
