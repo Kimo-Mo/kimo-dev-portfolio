@@ -1,13 +1,10 @@
 import { socialLinks } from '@/services/data';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AnimatedWrapper } from './AnimatedWrapper';
 
 export const SocialLinks = () => {
   return (
-    <AnimatedWrapper
-      from="right"
-      className="fixed top-0 end-4 h-screen w-fit z-10 flex items-center">
+    <div className="fixed top-0 h-screen end-4 w-fit z-10 flex items-center">
       <div className="flex flex-col justify-center items-center gap-3">
         {socialLinks.map((s) => (
           <Link
@@ -25,6 +22,6 @@ export const SocialLinks = () => {
         ))}
         <span className="block w-[2px] h-20 bg-primary rounded-xl"></span>
       </div>
-    </AnimatedWrapper>
+    </div>
   );
 };

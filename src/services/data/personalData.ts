@@ -11,3 +11,21 @@ export const socialLinks = [
   { id: 'github', href: 'https://github.com/kimo-mo' },
   { id: 'instagram', href: 'https://www.instagram.com/kareem_mohamed_19/' },
 ];
+
+export const experiences = [
+  {
+    date: '- jul 2025 - present',
+    company: '- Buguard',
+    title: 'Frontend Developer, Intern',
+  },
+  {
+    date: '- jul 2024 - sep 2024',
+    company: '- ITI',
+    title: 'Frontend Developer, Intern',
+  },
+  {
+    date: '- 2022 - present',
+    company: '- freelance',
+    title: 'Frontend Developer',
+  },
+]

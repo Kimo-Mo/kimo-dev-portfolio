@@ -15,7 +15,7 @@ const services = [
     id: '2',
     title: 'Responsive Web Design',
     content:
-      'I design and implement websites that adapt seamlessly to any screen size—whether it’s mobile, tablet, or desktop. By applying responsive design principles and using frameworks like Tailwind CSS and Bootstrap, I make sure that layouts remain consistent, functional, and visually appealing across all devices. This ensures that users always have a smooth browsing experience without compromising design or usability.',
+      'I design and implement websites that adapt seamlessly to any screen size—whether it\'s mobile, tablet, or desktop. By applying responsive design principles and using frameworks like Tailwind CSS and Bootstrap, I make sure that layouts remain consistent, functional, and visually appealing across all devices. This ensures that users always have a smooth browsing experience without compromising design or usability.',
   },
   {
     id: '3',
@@ -49,7 +49,7 @@ export default function ServicesAccordion() {
       <Accordion type="single" collapsible className="w-full" defaultValue="1">
         {services.map((service, idx) => (
           <AccordionItem value={service.id} key={service.id} className="py-2">
-            <AnimatedWrapper from="up" delay={idx * 0.15}>
+            <AnimatedWrapper from="left" delay={idx * 0.15}>
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 rounded-md py-2 text-left leading-6 transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-300 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0">
                   <span className="text-xl lg:text-3xl font-bold leading-[1.5] bg-gradient bg-clip-text text-transparent accordion-title relative pl-3 lg:pl-5">
@@ -61,8 +61,6 @@ export default function ServicesAccordion() {
                   />
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
-            </AnimatedWrapper>
-            <AnimatedWrapper from="up" delay={idx * 0.15}>
               <AccordionContent className="text-muted-foreground text-sm lg:text-base pb-2 ml-5 lg:ml-10">
                 {service.content}
               </AccordionContent>
