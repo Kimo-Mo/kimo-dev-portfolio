@@ -175,31 +175,23 @@
     @apply border-border outline-ring/50 transition-all duration-100 ease-in-out;
   }
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
+    overflow-x: hidden;
   }
 }
-
 ::-webkit-scrollbar-thumb {
-  @apply rounded;
-  background-image: linear-gradient(
-    180deg,
-    #b86adf 0%,
-    #ff6c63 52%,
-    #ffb147 100%
-  );
+  @apply rounded bg-gradient-start;
 }
 ::-webkit-scrollbar-track {
   @apply bg-primary/50;
 }
 ::-webkit-scrollbar {
-  @apply w-2.5 h-2.5;
+  @apply w-2 h-2;
 }
-
 html {
-  width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ::selection {

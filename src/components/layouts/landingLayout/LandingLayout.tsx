@@ -24,7 +24,9 @@ const LandingLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
         {children}
       </div>
-      <SocialLinks />
+      <div className="hidden lg:block">
+        <SocialLinks />
+      </div>
     </div>
   );
 };

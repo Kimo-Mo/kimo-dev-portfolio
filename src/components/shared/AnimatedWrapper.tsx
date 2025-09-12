@@ -27,7 +27,7 @@ export const AnimatedWrapper = ({
     down: { opacity: 0, y: 75 },
   }[from];
   const transition = {
-    duration: 0.45,
+    duration: 0.5,
     ease: easeOut,
     delay,
   };
@@ -45,13 +45,16 @@ export const AnimatedWrapper = ({
       };
 
   return (
-    <motion.div
-      ref={ref}
-      initial={initial}
-      animate={animate}
-      transition={transition}
-      className={className}>
-      {children}
-    </motion.div>
+    <div className={className + 'overflow-hidden'}>
+      <motion.div
+        ref={ref}
+        initial={initial}
+        animate={animate}
+        transition={transition}
+        className={className}
+        style={{ willChange: 'transform, opacity' }}>
+        {children}
+      </motion.div>
+    </div>
   );
-}
+};

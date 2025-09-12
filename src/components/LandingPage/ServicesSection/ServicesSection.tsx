@@ -3,7 +3,7 @@ import ServicesAccordion from './ServicesAccordion';
 
 const ServicesSection = () => {
   return (
-    <section id="services">
+    <section id="services" className="!min-h-fit">
       <AnimatedWrapper from="left">
         <p className="italic font-semibold capitalize">services</p>
       </AnimatedWrapper>

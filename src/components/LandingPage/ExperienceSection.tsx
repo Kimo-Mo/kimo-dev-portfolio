@@ -1,24 +1,7 @@
 import { IButton } from '../shared';
 import { AnimatedWrapper } from '@/components/shared';
+import { experiences } from '@/services/data';
 import Link from 'next/link';
-
-const experiences = [
-  {
-    date: '- jul 2025 - present',
-    company: '- Buguard',
-    title: 'Frontend Developer, Intern',
-  },
-  {
-    date: '- jul 2024 - sep 2024',
-    company: '- ITI',
-    title: 'Frontend Developer, Intern',
-  },
-  {
-    date: '- 2022 - present',
-    company: '- freelance',
-    title: 'Frontend Developer',
-  },
-]
 
 const ExperienceSection = () => {
   return (

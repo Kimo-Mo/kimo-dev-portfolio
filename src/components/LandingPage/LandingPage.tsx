@@ -2,6 +2,7 @@ import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ExperienceSection from './ExperienceSection';
 import { ServicesSection } from './ServicesSection';
+import SkillsSection from './SkillsSection';
 
 const LandingPage = () => {
   return (
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <AboutSection />
       <ExperienceSection />
       <ServicesSection />
+      <SkillsSection />
     </main>
   );
 };

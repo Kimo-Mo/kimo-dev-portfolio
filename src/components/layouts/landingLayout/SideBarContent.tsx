@@ -63,11 +63,11 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
           </AnimatedWrapper>
         ))}
       </AnimatedWrapper>
-      <AnimatedWrapper from="down" className="flex flex-col gap-7.5">
-        <AnimatedWrapper from="down" delay={0.15}>
+      <div className="flex flex-col gap-7.5">
+        <AnimatedWrapper from="left">
           <ThemeSwitch />
         </AnimatedWrapper>
-        <AnimatedWrapper from="down" delay={0.3}>
+        <AnimatedWrapper from="left" delay={0.15}>
           <div className="flex gap-3 *:p-2 *:bg-background *:dark:bg-background/10 *:rounded-full">
             {socialLinks.map((s) => (
               <Link key={s.id} target="_blank" href={s.href}>
@@ -81,10 +81,10 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
             ))}
           </div>
         </AnimatedWrapper>
-        <AnimatedWrapper from="down" delay={0.45}>
+        <AnimatedWrapper from="left" delay={0.30}>
           <p>Copyright &copy;2025 Kimo Dev. All rights reserved.</p>
         </AnimatedWrapper>
-      </AnimatedWrapper>
+      </div>
     </>
   );
 };
