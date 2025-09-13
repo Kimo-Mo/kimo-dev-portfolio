@@ -61,7 +61,7 @@ function DrawerContent({
         className={cn(
           'group/drawer-content bg-background fixed z-50 flex h-auto flex-col',
           direction === 'left'
-            ? 'inset-y-0 left-0 w-3/4 max-w-xs border-r'
+            ? 'inset-y-0 left-0 w-3/4 max-w-xs'
             : '',
           className
         )}

@@ -44,7 +44,7 @@ const AboutSection = () => {
           </Link>
         </AnimatedWrapper>
         <div className="flex flex-col gap-10 flex-3/5">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 pb-10 border-b border-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4 pb-10 border-b border-border">
             <AnimatedWrapper from="left">
               <MyInfo text={phone} icon={<Phone />} />
             </AnimatedWrapper>
@@ -81,7 +81,7 @@ const AboutSection = () => {
             </div>
           </AnimatedWrapper>
           <AnimatedWrapper from="left">
-            <p className="flex items-center gap-2 bg-primary text-primary-foreground p-5 italic font-semibold">
+            <p className="flex items-center gap-2 bg-primary text-primary-foreground p-5 italic font-semibold rounded-xl">
               <QuoteDown size="46" color="#555" variant="Bold" />
               &quot;Design is not just what it looks like and feels like. <br />
               Design is how it works.&quot; - Steve Jobs
