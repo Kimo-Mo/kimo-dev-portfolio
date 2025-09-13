@@ -17,8 +17,8 @@ const ContactSection = () => {
           </AnimatedWrapper>
           <AnimatedWrapper from="left">
             <p>
-              I'm here to help! Whether you have questions, need support, or
-              want to collaborate, feel free to reach out. Let's connect and
+              I&apos;m here to help! Whether you have questions, need support, or
+              want to collaborate, feel free to reach out. Let&apos;s connect and
               make something great together!
             </p>
           </AnimatedWrapper>
