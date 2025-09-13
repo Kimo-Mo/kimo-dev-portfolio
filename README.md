@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kimo Dev Portfolio
 
-## Getting Started
+A modern, responsive developer portfolio built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**. This project showcases the work, skills, and experience of Kareem Mohamed (Kimo), a passionate Frontend Developer from Cairo, Egypt.
 
-First, run the development server:
+![Portfolio Screenshot](public/images/kimo-dev-portfolio.png)
+
+---
+
+## 🚀 Overview
+
+This portfolio highlights personal projects, professional experience, and skills in web development. It is designed for performance, accessibility, and a great user experience across devices.
+
+---
+
+## ✨ Features
+
+- **Landing Page** with animated hero section
+- **Projects Showcase** with live demo and GitHub links
+- **Skills & Technologies** section
+- **Experience Timeline**
+- **Contact Form** (integrated via EmailJS)
+- **Dark/Light Theme Toggle**
+- **Responsive Design**
+- **Modern UI/UX**
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Radix UI](https://www.radix-ui.com/)
+- [EmailJS](https://www.emailjs.com/) (contact form)
+- [Zod](https://zod.dev/) (validation)
+- [Lucide React](https://lucide.dev/)
+
+---
+
+## 📦 Getting Started
+
+Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Kimo-Mo/kimo-dev-portfolio.git
+cd kimo-dev-portfolio
+pnpm install # or npm install / yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev # or npm run dev / yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🗂️ Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── public/               # Static assets (images, icons)
+├── src/
+│   ├── app/              # Next.js app directory
+│   ├── components/       # UI and layout components
+│   ├── lib/              # Utilities
+│   ├── services/data/    # Data (projects, skills, personal info)
+│   └── ...
+├── package.json
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏆 Projects Showcase
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### [Forever E-commerce](https://forever-ecommerce-mocha.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A fully functional e-commerce platform built with React.js, Bootstrap, and Firebase. Features product listing, search, cart, checkout, and authentication. [GitHub](https://github.com/Kimo-Mo/forever-ecommerce)
+
+### [Exclusive E-commerce](https://exclusive-ecommerce-pearl.vercel.app/)
+
+Responsive e-commerce website using HTML5, Tailwind CSS, JavaScript, and Firebase. Includes cart, wishlist, authentication, and animated UI. [GitHub](https://github.com/Kimo-Mo/Exclusive-ecommerce)
+
+---
+
+## 💼 Experience
+
+- **Buguard** (Frontend Developer, Intern) — Jul 2025 - Present
+- **ITI** (Frontend Developer, Intern) — Jul 2024 - Sep 2024
+- **Freelance** (Frontend Developer) — 2022 - Present
+
+---
+
+## 📬 Contact
+
+- **Name:** Kareem Mohamed
+- **Location:** Cairo, Egypt
+- **Email:** kimomo844@gmail.com
+- **LinkedIn:** [linkedin.com/in/kareem-dev](https://www.linkedin.com/in/kareem-dev/)
+- **GitHub:** [github.com/kimo-mo](https://github.com/kimo-mo)
+- **Instagram:** [@kareem_mohamed_19](https://www.instagram.com/kareem_mohamed_19/)
+
+---
+
+## 🙏 Credits
+
+- Built and implemented by Kareem Mohamed
+- Inspired by modern developer portfolio best practices
+- Icons by [Lucide](https://lucide.dev/) and [Iconsax](https://iconsax.io/)
+- Design by ([Fawzy UI](https://www.figma.com/design/1uWab08g2jgbZjYFfahpC1/Portfolio%7C-Personal-Portfolio-%7C-5---Community-?node-id=0-1&t=KIfSqRrQrSZBZzyU-0))
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
