@@ -1,8 +1,7 @@
 'use client';
 
-import { useInView, motion } from 'motion/react';
-import { easeOut } from 'motion';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 
 interface AnimatedWrapperProps {
   children: React.ReactNode;
@@ -17,41 +16,69 @@ export const AnimatedWrapper = ({
   from = 'right',
   delay = 0,
 }: AnimatedWrapperProps) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.3 });
+  const ref = useRef<HTMLDivElement>(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
-  const initial = {
-    left: { opacity: 0, x: -75 },
-    right: { opacity: 0, x: 75 },
-    up: { opacity: 0, y: -75 },
-    down: { opacity: 0, y: 75 },
-  }[from];
-  const transition = {
-    duration: 0.5,
-    ease: easeOut,
-    delay,
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setShouldAnimate(true);
+          }, delay * 1000);
+          observer.unobserve(element);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -5% 0px',
+      }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [delay]);
+
+  const getInitialTransform = () => {
+    switch (from) {
+      case 'left':
+        return 'translateX(-50px)';
+      case 'right':
+        return 'translateX(50px)';
+      case 'up':
+        return 'translateY(-50px)';
+      case 'down':
+        return 'translateY(50px)';
+      default:
+        return 'translateX(50px)';
+    }
   };
-  const animate = inView
-    ? { opacity: 1, x: 0, y: 0 }
-    : {
-        opacity: 0,
-        ...(from === 'left'
-          ? { x: -75 }
-          : from === 'right'
-          ? { x: 75 }
-          : from === 'up'
-          ? { y: -75 }
-          : { y: 75 }),
-      };
 
   return (
-    <div className={className + 'overflow-hidden'}>
+    <div className={`${className} overflow-hidden`}>
       <motion.div
         ref={ref}
-        initial={initial}
-        animate={animate}
-        transition={transition}
         className={className}
+        initial={{
+          opacity: 0,
+          transform: getInitialTransform(),
+        }}
+        animate={
+          shouldAnimate
+            ? {
+                opacity: 1,
+                transform: 'translate(0px, 0px)',
+              }
+            : {}
+        }
+        transition={{
+          duration: 0.75,
+          ease: [0.25, 0.1, 0.25, 1],
+        }}
         style={{ willChange: 'transform, opacity' }}>
         {children}
       </motion.div>
