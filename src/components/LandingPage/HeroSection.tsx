@@ -27,7 +27,7 @@ const HeroSection = () => {
           </p>
         </AnimatedWrapper>
         <AnimatedWrapper from="right">
-          <Link href="#contact">
+          <Link href="#contacts">
             <IButton text="lets talk with me" />
           </Link>
           <div className="mt-10 flex items-center gap-x-6 gap-y-2 flex-wrap">
