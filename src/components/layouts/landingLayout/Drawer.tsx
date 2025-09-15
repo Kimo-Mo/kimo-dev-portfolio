@@ -19,7 +19,6 @@ interface DrawerProps {
 const Drawer = ({ open, setOpen }: DrawerProps) => {
   return (
     <UIDrawer open={open} onOpenChange={setOpen} direction="left">
-      <DrawerTrigger />
       <DrawerContent className="lg:hidden bg-primary text-primary-foreground h-screen fixed top-0 left-0 outline-none w-3/4 max-w-xs">
         <div className="hidden">
           <DrawerHeader>
