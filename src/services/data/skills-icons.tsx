@@ -1,120 +1,102 @@
 export const skills = [
   {
     id: 1,
-    img: <img src="/skills-icons/html5-icon.png" alt="html" />,
+    imgSrc: '/skills-icons/html5-icon.png',
     name: 'HTML',
   },
   {
     id: 2,
-    img: <img src="/skills-icons/css3-icon.png" alt="css" />,
+    imgSrc: '/skills-icons/css3-icon.png',
     name: 'CSS',
   },
   {
     id: 3,
-    img: <img src="/skills-icons/javascript-icon.webp" alt="JavaScript" />,
+    imgSrc: '/skills-icons/javascript-icon.webp',
     name: 'JavaScript',
   },
   {
     id: 4,
-    img: <img src="/skills-icons/Typescript-icon.png" alt="TypeScript" />,
+    imgSrc: '/skills-icons/Typescript-icon.png',
     name: 'TypeScript',
   },
   {
     id: 5,
-    img: <img src="/skills-icons/React-icon.png" alt="React" />,
+    imgSrc: '/skills-icons/React-icon.png',
     name: 'React',
   },
   {
     id: 6,
-    img: (
-      <img
-        src="/skills-icons/nextjs-icon.png"
-        alt="Next.js"
-        className="bg-background dark:bg-foreground rounded-full"
-      />
-    ),
+    imgSrc: '/skills-icons/nextjs-icon.png',
     name: 'Next.js',
   },
   {
     id: 7,
-    img: <img src="/skills-icons/Tailwind-CSS-icon.png" alt="Tailwind CSS" />,
+    imgSrc: '/skills-icons/Tailwind-CSS-icon.png',
     name: 'Tailwind CSS',
   },
   {
     id: 8,
-    img: <img src="/skills-icons/Bootstrap-icon.png" alt="Bootstrap" />,
+    imgSrc: '/skills-icons/Bootstrap-icon.png',
     name: 'Bootstrap',
   },
   {
     id: 9,
-    img: <img src="/skills-icons/material-ui-icon.png" alt="Material-UI" />,
+    imgSrc: '/skills-icons/material-ui-icon.png',
     name: 'Material-UI',
   },
   {
     id: 10,
-    img: <img src="/skills-icons/ant-design-icon.svg" alt="Ant Design" />,
+    imgSrc: '/skills-icons/ant-design-icon.svg',
     name: 'Ant Design',
   },
   {
     id: 11,
-    img: (
-      <img
-        src="/skills-icons/shadcn-ui-logo.png"
-        alt="shadcn/ui"
-        className="bg-background dark:bg-foreground rounded"
-      />
-    ),
+    imgSrc: '/skills-icons/shadcn-ui-logo.png',
     name: 'shadcn/ui',
   },
   {
     id: 12,
-    img: <img src="/skills-icons/sass-icon.png" alt="Sass" />,
+    imgSrc: '/skills-icons/sass-icon.png',
     name: 'Sass',
   },
   {
     id: 13,
-    img: <img src="/skills-icons/redux-icon.webp" alt="Redux" />,
+    imgSrc: '/skills-icons/redux-icon.webp',
     name: 'Redux',
   },
   {
     id: 14,
-    img: <img src="/skills-icons/react-query-icon.webp" alt="React Query" />,
+    imgSrc: '/skills-icons/react-query-icon.webp',
     name: 'React Query',
   },
   {
     id: 15,
-    img: <img src="/skills-icons/react-router-icon.svg" alt="React Router" />,
+    imgSrc: '/skills-icons/react-router-icon.svg',
     name: 'React Router',
   },
   {
     id: 16,
-    img: <img src="/skills-icons/firebase-icon.png" alt="Firebase" />,
+    imgSrc: '/skills-icons/firebase-icon.png',
     name: 'Firebase',
   },
   {
     id: 17,
-    img: <img src="/skills-icons/supabase-icon.png" alt="Supabase" />,
+    imgSrc: '/skills-icons/supabase-icon.png',
     name: 'Supabase',
   },
   {
     id: 18,
-    img: <img src="/skills-icons/rest-api-icon.png" alt="REST API" />,
+    imgSrc: '/skills-icons/rest-api-icon.png',
     name: 'REST API',
   },
   {
     id: 19,
-    img: <img src="/skills-icons/git-icon.png" alt="Git" />,
+    imgSrc: '/skills-icons/git-icon.png',
     name: 'Git',
   },
   {
     id: 20,
-    img: (
-      <img
-        src="/skills-icons/github-icon.png"
-        alt="GitHub"
-        className="bg-background dark:bg-foreground rounded-full p-1"
-      />
-    ),
+    imgSrc: '/skills-icons/github-icon.png',
     name: 'GitHub',
   },
 ];

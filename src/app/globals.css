@@ -175,7 +175,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 transition-all duration-100 ease-in-out;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;

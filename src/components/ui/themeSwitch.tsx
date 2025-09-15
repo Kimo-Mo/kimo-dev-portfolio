@@ -3,7 +3,6 @@
 import { useId } from 'react';
 import { MoonIcon, SunIcon } from 'lucide-react';
 
-import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from 'next-themes';
 

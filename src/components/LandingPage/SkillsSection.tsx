@@ -1,5 +1,6 @@
 import { skills } from '@/services/data';
 import { AnimatedWrapper } from '../shared';
+import Image from 'next/image';
 
 const SkillsSection = () => {
   return (
@@ -16,7 +17,21 @@ const SkillsSection = () => {
         {skills.map((skill) => (
           <AnimatedWrapper key={skill.id} delay={0.05 * skill.id} from="left">
             <div className="flex flex-col items-center justify-center gap-4 p-4 rounded-2xl bg-background text-primary *:first:size-20 *:first:object-contain shadow">
-              {skill.img}
+              <Image
+                src={skill.imgSrc}
+                alt={skill.name}
+                width={80}
+                height={80}
+                className={
+                  skill.name === 'Next.js'
+                    ? 'dark:bg-primary dark:rounded-full'
+                    : skill.name === 'GitHub'
+                    ? 'dark:bg-primary dark:rounded-full dark:p-1'
+                    : skill.name === 'shadcn/ui'
+                    ? 'dark:bg-primary dark:rounded-2xl'
+                    : ''
+                }
+              />
               <span className="font-semibold uppercase text-base">
                 {skill.name}
               </span>
