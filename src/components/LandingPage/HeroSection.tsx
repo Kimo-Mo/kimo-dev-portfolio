@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { AnimatedWrapper, IButton, MyInfo } from '../shared';
+import { AnimatedWrapper, IButton } from '../shared';
 import Link from 'next/link';
-import { Mail, Phone } from 'lucide-react';
 import { personalData } from '@/services/data';
 
 const HeroSection = () => {
-  const { firstName, lastName, phone, email } = personalData;
+  const { firstName, lastName } = personalData;
   return (
     <section
       className="flex flex-col lg:flex-row items-center justify-between"
@@ -30,10 +29,6 @@ const HeroSection = () => {
           <Link href="#contacts">
             <IButton text="lets talk with me" />
           </Link>
-          <div className="mt-10 flex items-center gap-x-6 gap-y-2 flex-wrap">
-            <MyInfo text={phone} icon={<Phone />} />
-            <MyInfo text={email} icon={<Mail />} />
-          </div>
         </AnimatedWrapper>
       </article>
       <AnimatedWrapper from="left">

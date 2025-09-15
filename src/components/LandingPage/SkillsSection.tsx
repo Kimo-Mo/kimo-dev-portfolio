@@ -14,8 +14,8 @@ const SkillsSection = () => {
       </AnimatedWrapper>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center">
         {skills.map((skill) => (
-          <AnimatedWrapper key={skill.id} delay={0.07 * skill.id} from="left">
-            <div className="flex flex-col items-center justify-center gap-4 p-4 rounded-2xl bg-background text-primary *:first:size-22 *:first:object-contain shadow">
+          <AnimatedWrapper key={skill.id} delay={0.05 * skill.id} from="left">
+            <div className="flex flex-col items-center justify-center gap-4 p-4 rounded-2xl bg-background text-primary *:first:size-20 *:first:object-contain shadow">
               {skill.img}
               <span className="font-semibold uppercase text-base">
                 {skill.name}

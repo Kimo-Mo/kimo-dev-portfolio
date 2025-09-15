@@ -1,9 +1,9 @@
 import { personalData } from '@/services/data';
 import Image from 'next/image';
 import { IButton, MyInfo, AnimatedWrapper } from '../shared';
-import { Mail, MapPin, Phone, SquareUserRound } from 'lucide-react';
+import { Mail, MapPin, SquareUserRound } from 'lucide-react';
 import Link from 'next/link';
-import { QuoteDown } from 'iconsax-reactjs';
+import { QuoteDown, Whatsapp } from 'iconsax-reactjs';
 
 const age = new Date().getFullYear() - personalData.birthYear;
 
@@ -21,7 +21,9 @@ const AboutSection = () => {
         </h2>
       </AnimatedWrapper>
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-        <AnimatedWrapper from="right" className="text-center flex-2/5">
+        <AnimatedWrapper
+          from="right"
+          className="text-center flex-2/5 flex items-center justify-center flex-col">
           <Image
             src="/images/about.png"
             alt="about"
@@ -38,21 +40,25 @@ const AboutSection = () => {
             <span className="font-normal">based in Egypt</span>
           </p>
           <Link
-            href="https://drive.google.com/uc?export=download&id=1VOUbQJKR343CxeQg87A773tlt8QNM9xj"
-            download>
-            <IButton text="download cv" />
+            href="https://drive.google.com/file/d/1VOUbQJKR343CxeQg87A773tlt8QNM9xj/view?usp=drive_link"
+            target="_blank">
+            <IButton text="view my cv" />
           </Link>
         </AnimatedWrapper>
         <div className="flex flex-col gap-10 flex-3/5">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4 pb-10 border-b border-border">
             <AnimatedWrapper from="left">
-              <MyInfo text={phone} icon={<Phone />} />
+              <Link href={`https://wa.me/${phone}`} target="_blank">
+                <MyInfo text={phone} icon={<Whatsapp variant="Outline" />} />
+              </Link>
             </AnimatedWrapper>
             <AnimatedWrapper from="left" delay={0.15}>
               <MyInfo text={`${age} yrs`} icon={<SquareUserRound />} />
             </AnimatedWrapper>
             <AnimatedWrapper from="left" delay={0.3}>
-              <MyInfo text={email} icon={<Mail />} />
+              <Link href={`mailto:${email}`} target="_blank">
+                <MyInfo text={email} icon={<Mail />} />
+              </Link>
             </AnimatedWrapper>
             <AnimatedWrapper from="left" delay={0.45}>
               <MyInfo text={address} icon={<MapPin />} />
