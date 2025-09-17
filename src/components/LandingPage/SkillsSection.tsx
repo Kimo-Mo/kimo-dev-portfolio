@@ -16,7 +16,7 @@ const SkillsSection = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center">
         {skills.map((skill) => (
           <AnimatedWrapper key={skill.id} delay={0.05 * skill.id} from="left">
-            <div className="flex flex-col items-center justify-center gap-4 p-4 rounded-2xl bg-background text-primary *:first:size-20 *:first:object-contain shadow">
+            <div className="flex flex-col items-center justify-center gap-4 p-4 rounded-2xl text-primary *:first:size-20 *:first:object-contain relative skill-card after:bg-primary/25 before:shadow-md overflow-hidden">
               <Image
                 src={skill.imgSrc}
                 alt={skill.name}
