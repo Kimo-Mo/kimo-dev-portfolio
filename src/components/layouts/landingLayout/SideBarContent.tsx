@@ -45,7 +45,7 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
       <h1 className="font-serif text-3xl font-bold italic">
         <Link href="/">KM</Link>
       </h1>
-      <AnimatedWrapper from="left" className="flex flex-col gap-5 text-lg">
+      <div className="flex flex-col gap-5 text-lg">
         {sections.map((s, i) => (
           <AnimatedWrapper
             delay={0.15 * i}
@@ -62,7 +62,7 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
             </Link>
           </AnimatedWrapper>
         ))}
-      </AnimatedWrapper>
+      </div>
       <div className="flex flex-col gap-7.5">
         <AnimatedWrapper from="left">
           <ThemeSwitch />

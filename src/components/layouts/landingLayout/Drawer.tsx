@@ -27,7 +27,7 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
           </DrawerHeader>
         </div>
         <div
-          className="flex flex-col justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12">
+          className="flex flex-col gap-y-4 justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12 overflow-y-auto">
           <SideBarContent setOpen={setOpen} />
         </div>
       </DrawerContent>
