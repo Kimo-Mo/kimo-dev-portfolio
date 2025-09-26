@@ -27,7 +27,7 @@ const HeroSection = () => {
         </AnimatedWrapper>
         <AnimatedWrapper from="right">
           <Link href="#contacts">
-            <IButton text="lets talk with me" />
+            <IButton text="talk with me" />
           </Link>
         </AnimatedWrapper>
       </article>
