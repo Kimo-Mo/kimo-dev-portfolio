@@ -25,15 +25,16 @@ const ProjectsSection = () => {
                 <p className="text-sm text-muted-foreground">
                   {project.description}
                 </p>
-                <div className="flex gap-2">
-                  <Link href={project.demoLink} target="_blank">
-                    <IButton text="view project" />
+                <div className="flex flex-wrap gap-2 *:flex-1 *:lg:flex-none">
+                  <Link href={project.demoLink} target="_blank" className="*:w-full *:lg:w-auto">
+                    <IButton text="view project"/>
                   </Link>
-                  <Link href={project.githubLink} target="_blank">
-                    <IButton text="Source Code" />
+                  <Link href={project.githubLink} target="_blank" className="*:w-full *:lg:w-auto">
+                    <IButton text="Source Code"/>
                   </Link>
                 </div>
               </div>
+              <div className="flex-1 flex justify-end">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -41,6 +42,7 @@ const ProjectsSection = () => {
                 height={400}
                 className="w-auto h-auto rounded-2xl shadow-sm"
               />
+              </div>
             </div>
           </AnimatedWrapper>
         ))}

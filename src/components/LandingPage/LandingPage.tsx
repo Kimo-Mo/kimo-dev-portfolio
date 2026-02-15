@@ -8,7 +8,7 @@ import { ContactSection } from './ContactSection';
 
 const LandingPage = () => {
   return (
-    <main className="lg:ml-[285px] *:min-h-screen *:pt-[2rem] *:lg:pt-[3.5rem] *:px-5 *:lg:px-20">
+    <main className="lg:ml-[285px] *:min-h-screen *:pt-[2rem] *:lg:pt-[3.5rem] *:px-5 *:md:px-10 *:lg:px-20">
       <HeroSection />
       <AboutSection />
       <ExperienceSection />

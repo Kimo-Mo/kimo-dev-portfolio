@@ -14,18 +14,18 @@ export const socialLinks = [
 
 export const experiences = [
   {
-    date: '- jul 2025 - present',
-    company: '- Buguard',
+    date: 'sep 2025 - present',
+    company: 'AutoBees International',
+    title: 'Frontend Developer, Full-time',
+  },
+  {
+    date: 'jul 2025 - present',
+    company: 'Buguard',
     title: 'Frontend Developer, Intern',
   },
   {
-    date: '- jul 2024 - sep 2024',
-    company: '- ITI',
+    date: 'jul 2024 - sep 2024',
+    company: 'ITI',
     title: 'Frontend Developer, Intern',
-  },
-  {
-    date: '- 2022 - present',
-    company: '- freelance',
-    title: 'Frontend Developer',
-  },
+  }
 ]

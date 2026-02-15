@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 
 const ContactSection = () => {
   return (
-    <section id="contacts" className="flex items-center justify-center">
+    <section id="contact" className="flex items-center justify-center">
       <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
         <article className="flex-1 flex flex-col gap-6">
           <AnimatedWrapper from="left">

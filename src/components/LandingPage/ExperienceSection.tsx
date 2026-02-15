@@ -17,11 +17,7 @@ const ExperienceSection = () => {
         </AnimatedWrapper>
         <AnimatedWrapper from="right">
           <p className="mb-10">
-            I completed practical internships and built real-world projects
-            deployed online. Skilled in API integration, performance
-            optimization, and writing clean, maintainable code. Eager to
-            contribute to dynamic teams and continuously grow in a professional
-            environment.
+            Professional Frontend Developer with a practical track record in architecting scalable web applications. Currently leading frontend initiatives for enterprise-level B2B Supply Chain and AgriTech solutions using React.js, TypeScript, and Modern UI libraries. My experience spans from intensive technical internships to delivering full-scale production platforms.
           </p>
         </AnimatedWrapper>
         <AnimatedWrapper from="right">
@@ -37,8 +33,8 @@ const ExperienceSection = () => {
           <AnimatedWrapper from="left" delay={i * 0.15} key={i}>
             <div className="border-b border-border pb-4">
               <p className="capitalize text-lg flex justify-between items-center mb-3">
-                <span> {ex.date}</span>
-                <span> {ex.company}</span>
+                <span>- {ex.date}</span>
+                <span>- {ex.company}</span>
               </p>
               <h2 className="text-2xl font-bold">{ex.title}</h2>
             </div>

@@ -10,6 +10,7 @@ import {
   Drawer as UIDrawer,
 } from '@/components/ui';
 import SideBarContent from './SideBarContent';
+import { CloseSquare } from 'iconsax-reactjs';
 
 interface DrawerProps {
   open: boolean;
@@ -26,8 +27,11 @@ const Drawer = ({ open, setOpen }: DrawerProps) => {
             <DrawerDescription />
           </DrawerHeader>
         </div>
+        <DrawerTrigger className='p-5 cursor-pointer w-fit'>
+          <CloseSquare />
+        </DrawerTrigger>
         <div
-          className="flex flex-col gap-y-4 justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden p-12 overflow-y-auto">
+          className="flex flex-col gap-y-4 justify-between w-full bg-primary text-primary-foreground h-screen sticky top-0 overflow-hidden md:p-12 p-5 pt-0 overflow-y-auto">
           <SideBarContent setOpen={setOpen} />
         </div>
       </DrawerContent>

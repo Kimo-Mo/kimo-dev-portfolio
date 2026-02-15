@@ -10,7 +10,7 @@ const sections = [
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
-  { id: 'contacts', label: 'Contacts' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 interface SideBarContentProps {

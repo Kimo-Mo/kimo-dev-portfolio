@@ -5,9 +5,8 @@ import { Mail, MapPin, SquareUserRound } from 'lucide-react';
 import Link from 'next/link';
 import { QuoteDown, Whatsapp } from 'iconsax-reactjs';
 
-const age = new Date().getFullYear() - personalData.birthYear;
-
 const AboutSection = () => {
+  const age = new Date().getFullYear() - personalData.birthYear;
   const { firstName, lastName, phone, email, address } = personalData;
 
   return (
